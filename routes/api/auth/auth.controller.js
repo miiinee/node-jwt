@@ -91,7 +91,7 @@ exports.login = (req, res) => {
                         }, 
                         secret, 
                         {
-                            expiresIn: '7d',
+                            expiresIn: '1h',
                             issuer: 'min.com',
                             subject: 'userInfo'
                         }, (err, token) => {

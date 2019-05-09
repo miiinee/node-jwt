@@ -1,0 +1,95 @@
+body {
+    background-color: #B2ADFF;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    height: 500px;
+    flex-direction: column;
+    
+}
+
+.form-label {
+    width: 100px;
+}
+
+.action-btn-group{
+    margin-bottom: 1.5rem;
+}
+
+.social-buttons a {
+    display: flex;
+}
+
+.social-login-button {
+    padding: 0.8rem;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 2px;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.social-login-button+.social-login-button {
+    margin-top: 1rem;
+}
+
+.social-login-button svg {
+    font-size: 2em;
+}
+
+.social-login-button .text {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.social-login-button .text .login {
+    font-weight: 400;
+}
+
+.social-login-button.github {
+    border: 1px solid #ced4da;
+    background: #e9ecef;
+    color: #212529;
+}
+.social-login-button.github > a {
+    color: unset;
+}
+.social-login-button.github > a:hover {
+    text-decoration: none;
+}
+
+.social-login-button.google {
+    border: 1px solid #d72020;
+    background: #c92a2a;
+}
+
+.social-login-button.google > a {
+    color: unset;
+}
+.social-login-button.google > a:hover {
+    text-decoration: none;
+}
+
+.social-login-button.facebook {
+    background: #1971c2;
+    border: 1px solid #1864ab;
+}
+
+.social-login-button.facebook > a {
+    color: unset;
+}
+.social-login-button.facebook > a:hover {
+    text-decoration: none;
+}

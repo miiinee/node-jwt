@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const path = require('path');
 
 const authMiddleware = (req, res, next) => {
     // read the token from header or url 
@@ -6,10 +7,14 @@ const authMiddleware = (req, res, next) => {
 
     // token does not exist
     if(!token) {
-        return res.status(403).json({
-            success: false,
-            message: 'not logged in'
-        });
+        // return res.status(403).json({
+        //     success: false,
+        //     message: 'not logged in'
+        // });
+        
+        return res.redirect(301, '/login');
+        
+        // return res.sendFile(path.resolve(__dirname, './../public/login.html'));
     }
 
     // create a promise that decodes the token
@@ -17,6 +22,7 @@ const authMiddleware = (req, res, next) => {
         (resolve, reject) => {
             jwt.verify(token, req.app.get('jwt-secret'), (err, decoded) => {
                 if(err) reject(err);
+
                 resolve(decoded);
             });
         }
